@@ -24,20 +24,7 @@ public class HomeActivity extends Activity {
             System.out.println("HomeActivity closing because already running");
             finish(); // prevent more instances of kiosk activity
         }
-        
-        LinearLayout layout = new LinearLayout(this);
-        LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-        
-        Button button = new Button(this);
-        button.setText("Click or press any key to begin...");
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                HomeActivity.this.startKioskActivity();
-            }
-        });
-        layout.addView(button, params);
-        
-        setContentView(layout);
+        HomeActivity.this.startKioskActivity();
     }
     
     @Override
