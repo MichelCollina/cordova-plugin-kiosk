@@ -49,7 +49,7 @@ public class KioskActivity extends CordovaActivity {
         // https://github.com/apache/cordova-plugin-statusbar/blob/master/src/android/StatusBar.java
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setRequestedOrientation(preferences.getString("Orientation", "portrait") == "portrait" ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT : ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
     
     @Override
